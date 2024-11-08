@@ -48,7 +48,7 @@ The MMAFN model is designed with the following main components:
 
 A diagram explaining the architecture is shown below:
 
-![MMAFN Architecture](C:/Users/24350/Downloads/Framework_v2.3.png)
+![MMAFN Architecture](Framework_v2.3.png)
 
 ## 3. Environment Setup
 This project requires Python 3.8 and the following dependencies:
