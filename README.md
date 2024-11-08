@@ -19,7 +19,7 @@ This repository contains the implementation of the **"MMAFN: Multi-Modal Attenti
 The directory structure of the project is as follows:
 
 ```
-CBD2/
+MMAFN/
 ├── data/                      # Dataset processing module
 │   └── dataset.py             # Script for dataset handling and preprocessing
 ├── Net/                       # Network architecture and model components
