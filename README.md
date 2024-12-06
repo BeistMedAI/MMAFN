@@ -79,7 +79,7 @@ For optimal performance, we recommend using an NVIDIA GPU (such as A100) with at
 To train the MMAFN model, run the following command:
 
 ```bash
-python launch.py --mode train --data_path ./data --epochs 300 --batch_size 2
+python main.py
 ```
 
 - **Parameters**:
