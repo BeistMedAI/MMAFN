@@ -159,34 +159,45 @@ python main.py --mode test --model_path ./models/mmafn.pth --data_path ./data
 
 ## 7. Results
 
-The MMAFN model outperforms other approaches in ADHD classification across several metrics.
-
 ### Performance on ADHD Classification
 
-| Method          | Modality             | Accuracy | Precision | Recall | F1 Score | AUC  |
-|-----------------|----------------------|----------|-----------|--------|----------|------|
-| MMAFN (Ours)    | fMRI+sMRI+Text       | 83.51%   | 88.39%    | 77.46% | 0.8255   | 0.8237 |
+| Method              | Modality            | ACC (%) | Precision (%) | Recall (%) | F1 Score | AUC   |
+|---------------------|---------------------|---------|---------------|------------|----------|-------|
+| 3D-CNN (fMRI)       | fMRI                | 71.85   | 75.4          | 63.57      | 0.6908   | 0.7215|
+| 3D-CNN (sMRI)       | sMRI                | 73.1    | 77.02         | 60.58      | 0.6803   | 0.732 |
+| TextCNN (Text)      | Text                | 65.31   | 67.9          | 55.2       | 0.6089   | 0.6845|
+| Trimodal ADF-FAD    | fMRI+sMRI+Text      | 79.45   | 82.13         | 68.27      | 0.7465   | 0.7874|
+| Trimodal GCN        | fMRI+sMRI+Text      | 81.27   | 84.01         | 70.52      | 0.7681   | 0.8015|
+| Trimodal MMGL       | fMRI+sMRI+Text      | 78.92   | 81.37         | 69.58      | 0.7483   | 0.7902|
+| **MMAFN (Our)**      | fMRI+sMRI+Text      | **83.51**   | **88.39**         | **77.46**      | **0.8255**   | **0.8237** |
 
 ### Ablation Study
 
-| Configuration          | Accuracy | Precision | Recall | F1 Score | AUC  |
-|------------------------|----------|-----------|--------|----------|------|
-| fMRI-only              | 78.24%   | 83.47%    | 65.23% | 0.7322   | 0.7648 |
-| sMRI-only              | 74.15%   | 82.13%    | 58.41% | 0.6847   | 0.7415 |
-| Text-only              | 69.88%   | 78.26%    | 47.89% | 0.5952   | 0.6832 |
-| **MMAFN (All Modalities)** | **83.51%** | **88.39%** | **77.46%** | **0.8255** | **0.8237** |
+| Configuration       | ACC (%) | Precision (%) | Recall (%) | F1 Score | AUC   |
+|---------------------|---------|---------------|------------|----------|-------|
+| fMRI-only           | 78.24   | 83.47         | 65.23      | 0.7322   | 0.7648|
+| sMRI-only           | 74.15   | 82.13         | 58.41      | 0.6847   | 0.7415|
+| Text-only           | 69.88   | 78.26         | 47.89      | 0.5952   | 0.6832|
+| fMRI+sMRI           | 80.45   | 86.72         | 69.38      | 0.7694   | 0.7924|
+| fMRI+Text           | 81.32   | 84.61         | 71.85      | 0.7776   | 0.8072|
+| sMRI+Text           | 80.22   | 82.88         | 74.32      | 0.7839   | 0.7985|
+| **fMRI+sMRI+Text**  | **83.51**   | **88.39**         | **77.46**      | **0.8255**   | **0.8237** |
+
 
 ---
 
-## 8. Citation
-
-If you use this code or find it helpful in your research, please cite our paper:
-
+### Citation
 ```
-Jia, J., Liang, R., Zhang, C., et al.
-"Multi-Modal Attention Fusion Network for ADHD Classification"
-IEEE International Symposium on Biomedical Imaging (ISBI), 2023.
+@InProceedings{jia2025mmafn,
+    author    = {Jia, J. and Liang, R. and Zhang, C. and et al.},
+    title     = {MMAFN: Multi-Modal Attention Fusion Network for ADHD Classification},
+    booktitle = {IEEE International Symposium on Biomedical Imaging -- ISBI 2025},
+    month     = {April},
+    year      = {2025},
+    url       = {}
+}
 ```
+
 
 ---
 
